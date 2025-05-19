@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login</title>
+</head>
+<body>
+  <h2>Admin Login</h2>
+  <label>Username: <input type="text" id="username"></label><br><br>
+  <label>Password: <input type="password" id="password"></label><br><br>
+  <button onclick="login()">Login</button>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      if (user === "Rk" && pass === "#$@njida119") {
+        localStorage.setItem("loggedIn", "true");
+        window.location.href = "index.html";
+      } else {
+        alert("Invalid username or password");
+      }
+    }
+  </script>
+</body>
+</html>
